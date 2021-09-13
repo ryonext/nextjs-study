@@ -2,7 +2,7 @@ export default function FirstPost({json}) {
   return <h1>{json.id} {json.joke}</h1>
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const res = await fetch(
     'https://icanhazdadjoke.com/',
     {
